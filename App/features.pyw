@@ -19,10 +19,10 @@ class ToolKit:
     @classmethod
     def send_email(cls, file):  # here we send the files via email of maximum 25MB
         try:
-            sender_email = 'anonymous.second.anonymous@gmail.com'
-            password = 'P_assword'
+            sender_email = ''
+            password = ''
 
-            receiver_email = 'anonymous.second.anonymous@gmail.com'
+            receiver_email = ''
 
             message = EmailMessage()
             message['Subject'] = 'Data'
