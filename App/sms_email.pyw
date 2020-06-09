@@ -9,18 +9,18 @@ class Message:
     def __init__(self):
         """BELOW are sms details"""
         self.message = '[SYSTEM IS ON!!]' + '\n' + subprocess.run('systeminfo', text=True, shell=True, capture_output=True).stdout.split('Domain:')[0]
-        self.phone_numbers = '8837833685'
-        self.api_key = 'IXjnZCuSsB9UOtaD0b2wP1xR3VNkq6vd4HGyLfQzWTFm85cMlp3ikshcfUVt0BzYxbWe1rESMlpyTFIv'
+        self.phone_numbers = 'Your phone number here'
+        self.api_key = 'your api here'
         self.url = "https://www.fast2sms.com/dev/bulk"
         self.payload = f"sender_id=FSTSMS&message={self.message}&language=english&route=p&numbers={self.phone_numbers}"
         self.headers = {'authorization': self.api_key, 'Content-Type': "application/x-www-form-urlencoded",
                         'Cache-Control': "no-cache"}
 
         """BELOW are email details"""
-        self.sender_email = 'anonymous.second.anonymous@gmail.com'
-        self.password = 'P_assword'
+        self.sender_email = 'sender_email here'
+        self.password = 'password of sender email'
 
-        self.receiver_email = 'anonymous.second.anonymous@gmail.com'
+        self.receiver_email = 'receiver email here'
 
         self.em = EmailMessage()
         self.em['Subject'] = 'MAKE SERVER ON!!'
